@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=SafeCash Core
+Comment=Connect to the SafeCash P2P Network
+Comment[de]=Verbinde mit dem SafeCash peer-to-peer Netzwerk
+Comment[fr]=SafeCash, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=SafeCash, eşten eşe kriptografik sanal para birimi
+Exec=safecash-qt %u
+Terminal=false
+Type=Application
+Icon=safecash128
+MimeType=x-scheme-handler/safecash;
+Categories=Office;Finance;
+StartupWMClass=SafeCash-qt

@@ -1,0 +1,25 @@
+# It is not recommended to modify this file in-place, because it will
+# be overwritten during package upgrades. If you want to add further
+# options or overwrite existing ones then use
+# $ systemctl edit safecashd.service
+# See "man systemd.service" for details.
+
+# Note that almost all daemon options could be specified in
+# /etc/safecash/safecash.conf
+
+[Unit]
+Description=SafeCash daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/safecashd -daemon -conf=/etc/safecash/safecash.conf -pid=/run/safecashd/safecashd.pid
+# Creates /run/safecashd owned by safecash
+RuntimeDirectory=safecashd
+User=safecash
+Type=forking
+PIDFile=/run/safecashd/safecashd.pid
+Restart=on-failure
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

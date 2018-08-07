@@ -1,0 +1,11 @@
+[Protocol]
+exec=safecash-qt '%u'
+protocol=safecash
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
